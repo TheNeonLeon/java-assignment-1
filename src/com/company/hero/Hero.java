@@ -4,28 +4,18 @@ public abstract class Hero {
     protected int level;
     protected String name;
 
-    //implement all necessary abstracts
-    public abstract String name(String name);
-    public abstract int level(int level);
+    //create constructor
+    public Hero(int level, String name){
+        this.level = level;
+        this.name =  name;
+
+    }
 
     //Default attributes to heroes
 
     public int setLevel(int lvl){
         this.level = lvl;
         return lvl;
-    }
-
-    public void setIntelligence(int intelligence){
-
-    }
-
-    public void setStrength(int strength){
-        this.setStrength(strength);
-    }
-
-    public void setDexterity(int dexterity){
-
-        this.setDexterity(dexterity);
     }
 
     public int getLevel(int level) {
@@ -41,4 +31,7 @@ public abstract class Hero {
     }
 
 
+    public abstract String name(String name);
+
+    public abstract int level(int level);
 }
