@@ -12,7 +12,7 @@ public class PrimaryAttribute {
         this.intelligence = intelligence;
     }
 
-    //Declare getters
+    //Declare getters to change private state
     public int getStrength(){
         return strength;
     }
