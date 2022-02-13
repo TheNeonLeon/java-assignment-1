@@ -1,4 +1,4 @@
 package com.company.hero.items;
 
-public class Armor extends Item {
+public abstract class Item {
 }

@@ -1,11 +1,13 @@
 package com.company.hero;
 
 public abstract class Hero {
-    //Declare state
+    //implement all necessary abstracts
+    public abstract String name(String name);
+    public abstract int level(String level);
 
-
-    public void setIntelligence(){
-        this.setIntelligence();
+    //Default attributes to heroes
+    public void setIntelligence(int intelligence){
+        this.setIntelligence(1);
     }
 
     public void setStrength(int strength){
@@ -15,5 +17,5 @@ public abstract class Hero {
     public void setDexterity(int dexterity){
         this.setDexterity(1);
     }
-}
 
+}
