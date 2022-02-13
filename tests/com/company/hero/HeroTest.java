@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import java.lang.constant.Constable;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+//Create class for test
 public class HeroTest {
     @Test
     public void returnLevelUponHeroCreation(){
