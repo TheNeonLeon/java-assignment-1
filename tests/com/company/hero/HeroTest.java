@@ -32,25 +32,14 @@ public class HeroTest {
     public void add_validLevelUp_shouldReturnIncreasedStats(){
         //Arrange
         Hero mage = new Mage(1,"Jaina proudmoore",8);
-        int initialStat = 8;
-        int newStat = 1;
-        mage.primaryAttribute.increaseIntelligence(5);
 
-        int expected = initialStat + 5;
-
-        int actual = 2;
+        mage.increaseAttributes();
+        System.out.println(mage.primaryAttribute.getIntelligence());
+        int expected = 13;
+        int actual = mage.primaryAttribute.getIntelligence();
 
         assertEquals(expected, actual);
-
-
-       /* Hero mage = new Mage();
-
-        //Act
-        int actual = mage.levelUp(initialLevel, afterLevelUp);
-        //Assert
-        assertEquals(expected,actual);*/
-
-    }
+ }
 
 
 }
