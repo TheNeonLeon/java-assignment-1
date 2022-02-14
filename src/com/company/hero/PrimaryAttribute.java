@@ -6,13 +6,15 @@ public class PrimaryAttribute {
     private int dexterity;
     private int intelligence;
 
-    public void primaryAttribute(int strength, int dexterity, int intelligence){
+    //Constructor
+    public PrimaryAttribute(int strength, int dexterity, int intelligence) {
         this.strength = strength;
         this.dexterity = dexterity;
         this.intelligence = intelligence;
     }
 
-    //Declare getters to change private state
+
+    //Declare getters
     public int getStrength(){
         return strength;
     }

@@ -1,26 +1,28 @@
 package com.company.hero;
 
 public class Mage extends Hero {
+    PrimaryAttribute primaryAttribute;
 
-    public Mage(String name){
-        super(1, name);
+    public Mage(int level, String name, int intelligence){
+        super(level, name, intelligence,1,1);
     }
 
-    @Override
-    public String name(String name) {
-        return this.name;
+    //set primary attributes to mage default attributes
+
+    public void setMagePrimaryAttribute(int intelligence) {
+
+        this.primaryAttribute = new PrimaryAttribute(1,1,intelligence);
     }
 
-    @Override
-    public int level(int level) {
-        return this.level;
+    public PrimaryAttribute getPrimaryAttribute() {
+
+        return primaryAttribute;
     }
 
+    public void increaseAttributes(){
+        primaryAttribute.increaseDexterity(1);
+        primaryAttribute.increaseStrength(1);
+        primaryAttribute.increaseIntelligence(5);
+    }
 
-
-
-    //Mage starts with 8 intelligence
-    /*public getIntelligence(){
-        return
-    }*/
 }

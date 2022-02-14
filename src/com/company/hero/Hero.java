@@ -3,12 +3,13 @@ package com.company.hero;
 public abstract class Hero {
     protected int level;
     protected String name;
+    PrimaryAttribute primaryAttribute;
 
     //create constructor
-    public Hero(int level, String name){
+    public Hero(int level, String name, int intelligence, int strength, int dexterity){
         this.level = level;
         this.name =  name;
-
+        this.primaryAttribute = new PrimaryAttribute(strength, dexterity, intelligence);
     }
 
     //Default attributes to heroes
@@ -26,12 +27,10 @@ public abstract class Hero {
     }
 
     //increment level on levelup
-    public int levelUp(){
-      return this.level++;
+    public void levelUp(){
+        increaseAttributes();
+        this.level++;
     }
 
-
-    public abstract String name(String name);
-
-    public abstract int level(int level);
+    public abstract void increaseAttributes();
 }

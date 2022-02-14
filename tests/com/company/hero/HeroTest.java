@@ -10,18 +10,28 @@ public class HeroTest {
     @Test
     public void add_expectedStartingLevel_shouldReturnStartingLevel(){
         //Arrange
-        Hero mage = new Mage("Jaina proudmoore");
+        Hero mage = new Mage(1,"Jaina proudmoore",8);
         int expected = mage.level = 1;
         //Act
-        int actual = mage.setLevel(1);
+        int actual = mage.getLevel(1);
         //Assert
         assertEquals(expected, actual);
     }
     @Test
-    public void add_validLevelUp_shouldReturnLevelup(){
-        int initialLevel = 1;
-        int afterLevelUp = 2;
-        int expected = 2;
+    public void add_validLevelUp_shouldReturnIncreasedStats(){
+        //Arrange
+        Hero mage = new Mage(1,"Jaina proudmoore",8);
+        int initialStat = 8;
+        int newStat = mage.levelUp();
+        mage.primaryAttribute.increaseIntelligence(5);
+
+        int expected = initialStat + 5;
+
+        int actual = mage.levelUp(1,1,5);
+
+        assertEquals(expected, actual);
+
+
        /* Hero mage = new Mage();
 
         //Act
