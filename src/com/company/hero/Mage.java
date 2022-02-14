@@ -1,7 +1,6 @@
 package com.company.hero;
 
 public class Mage extends Hero {
-    PrimaryAttribute primaryAttribute;
 
     public Mage(int level, String name, int intelligence){
         super(level, name, intelligence,1,1);

@@ -13,8 +13,19 @@ public class HeroTest {
         Hero mage = new Mage(1,"Jaina proudmoore",8);
         int expected = mage.level = 1;
         //Act
-        int actual = mage.getLevel(1);
+        int actual = mage.getLevel();
         //Assert
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void add_level_shouldIncreaseLevel(){
+        Hero mage = new Mage(1, "Jaina proudmoore", 8);
+
+        System.out.println(mage.primaryAttribute.getDexterity());
+        mage.levelUp();
+
+        int expected = 2;
+        int actual = mage.getLevel();
         assertEquals(expected, actual);
     }
     @Test
@@ -22,12 +33,12 @@ public class HeroTest {
         //Arrange
         Hero mage = new Mage(1,"Jaina proudmoore",8);
         int initialStat = 8;
-        int newStat = mage.levelUp();
+        int newStat = 1;
         mage.primaryAttribute.increaseIntelligence(5);
 
         int expected = initialStat + 5;
 
-        int actual = mage.levelUp(1,1,5);
+        int actual = 2;
 
         assertEquals(expected, actual);
 

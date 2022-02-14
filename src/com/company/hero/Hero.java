@@ -19,7 +19,7 @@ public abstract class Hero {
         return lvl;
     }
 
-    public int getLevel(int level) {
+    public int getLevel() {
         return this.level;
     }
     public String getName() {
