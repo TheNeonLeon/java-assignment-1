@@ -6,9 +6,9 @@ import java.util.HashMap;
 public abstract class Item {
     private String itemName;
     private int requiredLevel;
-    private Slot slot;
+    private Slot.Slots slot;
 
-    public Item(String itemName, int requiredLevel, Slot slot){
+    public Item(String itemName, int requiredLevel, Slot.Slots slot){
         this.itemName = itemName;
         this.requiredLevel = requiredLevel;
         this.slot = slot;
@@ -20,7 +20,7 @@ public abstract class Item {
     public void setRequiredLevel(int requiredLevel){
         this.requiredLevel = requiredLevel;
     }
-    public void setSlot(Slot slot){
+    public void setSlot(Slot.Slots slot){
         this.slot = slot;
     }
     public String getItemName(){
@@ -29,7 +29,7 @@ public abstract class Item {
     public int getRequiredLevel(){
         return this.requiredLevel;
     }
-    public Slot getSlot(){
+    public Slot.Slots getSlot(){
         return this.slot;
     }
 

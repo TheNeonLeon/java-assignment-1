@@ -1,6 +1,6 @@
 package com.company.hero.items;
 
-public class Slot {
+public class Slot{
     enum Slots{
         HEAD,
         BODY,

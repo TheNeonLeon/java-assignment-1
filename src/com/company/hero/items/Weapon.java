@@ -2,6 +2,10 @@ package com.company.hero.items;
 
 public class Weapon extends Item{
 
+    public Weapon(String itemName, int requiredLevel, Slot.Slots slot) {
+        super(itemName,requiredLevel, slot);
+    }
+
     enum Weapons{
         AXE,
         BOW,
@@ -11,7 +15,5 @@ public class Weapon extends Item{
         SWORD,
         WAND
     }
-    public Weapon(String name, int requiredLevel, Slot slot) {
-        super(name, requiredLevel, slot);
-    }
+
 }
