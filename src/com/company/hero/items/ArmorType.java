@@ -1,4 +1,8 @@
 package com.company.hero.items;
 
-public class ArmorType {
+public enum ArmorType {
+        CLOTH,
+        LEATHER,
+        MAIL,
+        PLATE
 }

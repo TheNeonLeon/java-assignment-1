@@ -1,4 +1,11 @@
 package com.company.hero.items;
 
-public class WeaponType {
+public enum WeaponType {
+        AXE,
+        BOW,
+        DAGGER,
+        HAMMER,
+        STAFF,
+        SWORD,
+        WAND
 }

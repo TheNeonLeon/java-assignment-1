@@ -1,10 +1,9 @@
 package com.company.hero.items;
 
-public class Slot{
-    enum Slots{
+public enum Slot{
         HEAD,
         BODY,
         LEGS,
         WEAPON
-    }
+
 }

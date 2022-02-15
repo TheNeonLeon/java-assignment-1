@@ -1,13 +1,9 @@
 package com.company.hero.items;
 
 public class Armor extends Item {
-    enum Armors {
-        CLOTH,
-        LEATHER,
-        MAIL,
-        PLATE
-    }
-    public Armor(String name, int requiredLevel, Slot.Slots slot) {
+    private ArmorType armorType;
+
+    public Armor(String name, int requiredLevel, ArmorType armorType, Slot slot) {
         super(name, requiredLevel, slot);
     }
 }

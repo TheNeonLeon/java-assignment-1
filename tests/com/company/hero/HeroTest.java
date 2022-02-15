@@ -12,6 +12,7 @@ public class HeroTest {
         //Arrange
         Hero mage = new Mage(1,"Jaina proudmoore",8);
         int expected = mage.level = 1;
+
         //Act
         int actual = mage.getLevel();
         //Assert

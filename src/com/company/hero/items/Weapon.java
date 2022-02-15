@@ -2,18 +2,16 @@ package com.company.hero.items;
 
 public class Weapon extends Item{
 
-    public Weapon(String itemName, int requiredLevel, Slot.Slots slot) {
-        super(itemName,requiredLevel, slot);
+    private WeaponType type;
+    private int attackDamage;
+    private int attackSpeed;
+
+    public Weapon(String itemName, int requiredLevel, WeaponType type, int attackDamage, int attackSpeed, Slot slot)  {
+        super(itemName,requiredLevel,slot);
+        this.type = type;
+        this.attackDamage = attackDamage;
+        this.attackSpeed = attackSpeed;
     }
 
-    enum Weapons{
-        AXE,
-        BOW,
-        DAGGER,
-        HAMMER,
-        STAFF,
-        SWORD,
-        WAND
-    }
 
 }

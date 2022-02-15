@@ -10,7 +10,7 @@ public class Warrior extends Hero {
     }
 
     //set primary attributes to Ranger default attributes
-    public void setMagePrimaryAttribute(int dexterity) {
+    public void setWarriorPrimaryAttribute(int dexterity) {
 
         this.primaryAttribute = new PrimaryAttribute(1,dexterity,1);
     }

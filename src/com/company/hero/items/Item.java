@@ -1,14 +1,15 @@
 package com.company.hero.items;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 //Base abstract class item
 public abstract class Item {
     private String itemName;
     private int requiredLevel;
-    private Slot.Slots slot;
+    private Slot slot;
 
-    public Item(String itemName, int requiredLevel, Slot.Slots slot){
+    public Item(String itemName, int requiredLevel, Slot slot){
         this.itemName = itemName;
         this.requiredLevel = requiredLevel;
         this.slot = slot;
@@ -20,7 +21,7 @@ public abstract class Item {
     public void setRequiredLevel(int requiredLevel){
         this.requiredLevel = requiredLevel;
     }
-    public void setSlot(Slot.Slots slot){
+    public void setSlot(Slot slot){
         this.slot = slot;
     }
     public String getItemName(){
@@ -29,16 +30,28 @@ public abstract class Item {
     public int getRequiredLevel(){
         return this.requiredLevel;
     }
-    public Slot.Slots getSlot(){
+    public Slot getSlot(){
         return this.slot;
     }
 
+    /*ArrayList<WeaponType[]> classes = new ArrayList<WeaponType[]>();
+    WeaponType values[] = WeaponType.values();
+
+    for(WeaponType weapon: WeaponType.values())
+    {
+        classes.add(WeaponType.AXE);
+    }*/
+    public void checkValid() {
+        for (WeaponType weapon : WeaponType.values()) {
+            System.out.println(weapon);
+        }
+    }
 
     //All items have:
     //• Name
     //• Required level to equip the item.
     //• Slot in which the item is equipped.
     //store the equipment as a HashMap<Slot, Item>
-    HashMap<Slot, Item> equip = new HashMap<>();
+    HashMap<Slot, Weapon> equip = new HashMap<Slot, Weapon>();
 
 }
