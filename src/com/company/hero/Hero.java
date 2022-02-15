@@ -45,15 +45,17 @@ public abstract class Hero {
 
 //DPS CALC
     public double getDPS(){
-        //if no item is equipped return weapon dps without weapon
-        if(!equipment.containsKey(Slot.WEAPON)){
-            return 1 * (getTotal() / 100.0);
-        }else{
-            //else return custom weapon dps
-            double weaponDPS =
-                    ((Weapon)equipment.get(Slot.WEAPON)).getAttackDamage()
-                    * ((Weapon)equipment.get(Slot.WEAPON)).getAttackSpeed();
+        double dmgWithoutWeapon = 1 * (getTotal() / 100.0);
+        double weaponDamage =
+                ((Weapon)equipment.get(Slot.WEAPON)).getAttackDamage();
+        double weaponAttackSpeed = ((Weapon)equipment.get(Slot.WEAPON)).getAttackSpeed();
+        double weaponDPS = weaponDamage * weaponAttackSpeed;
+
+
+        if(equipment.containsKey(Slot.WEAPON)){
             return weaponDPS * (1 + (getTotal() / 100.0));
+        }else{
+            return dmgWithoutWeapon;
         }
 
     }

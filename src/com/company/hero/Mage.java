@@ -23,7 +23,7 @@ public class Mage extends Hero {
 
         return primaryAttribute;
     }
-
+//increaseAttrributes method
     public void increaseAttributes(){
         primaryAttribute.increaseDexterity(1);
         primaryAttribute.increaseStrength(1);
