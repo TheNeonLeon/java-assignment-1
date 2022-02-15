@@ -1,5 +1,5 @@
 package com.company.hero.items;
-
+//enums for weapon types
 public enum WeaponType {
         AXE,
         BOW,

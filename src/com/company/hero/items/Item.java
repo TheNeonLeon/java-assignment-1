@@ -3,18 +3,20 @@ package com.company.hero.items;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-//Base abstract class item
+//Item base abstract class item
 public abstract class Item {
+    //state for items
     private String itemName;
     private int requiredLevel;
     private Slot slot;
 
+    //item constructor
     public Item(String itemName, int requiredLevel, Slot slot){
         this.itemName = itemName;
         this.requiredLevel = requiredLevel;
         this.slot = slot;
     }
-
+//setter and getters
     public void setItemName(String itemName){
         this.itemName = itemName;
     }
@@ -51,6 +53,5 @@ public abstract class Item {
     //• Required level to equip the item.
     //• Slot in which the item is equipped.
     //store the equipment as a HashMap<Slot, Item>
-    HashMap<Slot, Weapon> equip = new HashMap<Slot, Weapon>();
 
 }

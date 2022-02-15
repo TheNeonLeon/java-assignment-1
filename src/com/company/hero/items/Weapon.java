@@ -1,11 +1,12 @@
 package com.company.hero.items;
 
 public class Weapon extends Item{
-
+//state for weapon class
     private WeaponType type;
     private double attackDamage;
     private double attackSpeed;
 
+    //constructor for weapon
     public Weapon(String itemName, int requiredLevel, WeaponType type, int attackDamage, double attackSpeed, Slot slot)  {
         super(itemName,requiredLevel,slot);
         this.type = type;
@@ -13,6 +14,7 @@ public class Weapon extends Item{
         this.attackSpeed = attackSpeed;
     }
 
+    //getters for the private state
     public WeaponType getType() {
         return type;
     }
