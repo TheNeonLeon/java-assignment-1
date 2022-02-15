@@ -21,7 +21,7 @@ public abstract class Hero {
     }
 
 
-
+//totalprimaryattribute
     public int getTotal(){
         int total = primaryAttribute.getIntelligence();
         total += primaryAttribute.getDexterity();
@@ -38,6 +38,20 @@ public abstract class Hero {
         }
 
         return total;
+    }
+
+//DPS CALC
+    public double getDPS(){
+        //if no item is equipped return dmg without weapon
+        if(!equipment.containsKey(Slot.WEAPON)){
+            return 1 * (getTotal() / 100.0);
+        }else{
+            double weaponDPS =
+                    ((Weapon)equipment.get(Slot.WEAPON)).getAttackDamage()
+                    * ((Weapon)equipment.get(Slot.WEAPON)).getAttackSpeed();
+            return weaponDPS * (1 + (getTotal() / 100.0));
+        }
+
     }
     //Default attributes to heroes
 
@@ -60,14 +74,14 @@ public abstract class Hero {
         this.level++;
     }
 
-    public double equipWeapon(Item item) throws InvalidWeaponException {
-        if(item.getRequiredLevel() > level){
+    public boolean equipWeapon(Weapon weapon) throws InvalidWeaponException {
+        if(weapon.getRequiredLevel() > level){
             throw new InvalidWeaponException("Cant equip weapon");
         }
 
-        equipment.put(item.getSlot(), item);
+        equipment.put(weapon.getSlot(), weapon);
 
-        return 0;
+        return true;
     }
 
     ArrayList<Weapon> classes = new ArrayList<Weapon>();
@@ -79,12 +93,13 @@ public abstract class Hero {
         return false;
     }
 
-    public boolean equipArmor(Item item) throws InvalidArmorException {
-        if(item.getRequiredLevel() > level){
+    public boolean equipArmor(Armor armor) throws InvalidArmorException {
+        if(armor.getRequiredLevel() > level){
             throw new InvalidArmorException("Cant equip armor");
-        }else{
-            return true;
         }
+        equipment.put(armor.getSlot(), armor);
+
+        return true;
     }
 
     public abstract void increaseAttributes();

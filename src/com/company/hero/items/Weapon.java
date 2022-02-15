@@ -3,7 +3,7 @@ package com.company.hero.items;
 public class Weapon extends Item{
 
     private WeaponType type;
-    private int attackDamage;
+    private double attackDamage;
     private double attackSpeed;
 
     public Weapon(String itemName, int requiredLevel, WeaponType type, int attackDamage, double attackSpeed, Slot slot)  {
@@ -13,5 +13,15 @@ public class Weapon extends Item{
         this.attackSpeed = attackSpeed;
     }
 
+    public WeaponType getType() {
+        return type;
+    }
+
+    public double getAttackDamage() {
+        return attackDamage;
+    }
+    public double getAttackSpeed(){
+        return attackSpeed;
+    }
 
 }
