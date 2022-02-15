@@ -34,8 +34,8 @@ public abstract class Item {
         return this.slot;
     }
 
-    /*ArrayList<WeaponType[]> classes = new ArrayList<WeaponType[]>();
-    WeaponType values[] = WeaponType.values();
+    //ArrayList<Weapon> classes = new ArrayList<Weapon>();
+    /*WeaponType values[] = WeaponType.values();
 
     for(WeaponType weapon: WeaponType.values())
     {
@@ -46,7 +46,6 @@ public abstract class Item {
             System.out.println(weapon);
         }
     }
-
     //All items have:
     //• Name
     //• Required level to equip the item.

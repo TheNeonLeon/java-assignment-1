@@ -4,9 +4,9 @@ public class Weapon extends Item{
 
     private WeaponType type;
     private int attackDamage;
-    private int attackSpeed;
+    private double attackSpeed;
 
-    public Weapon(String itemName, int requiredLevel, WeaponType type, int attackDamage, int attackSpeed, Slot slot)  {
+    public Weapon(String itemName, int requiredLevel, WeaponType type, int attackDamage, double attackSpeed, Slot slot)  {
         super(itemName,requiredLevel,slot);
         this.type = type;
         this.attackDamage = attackDamage;

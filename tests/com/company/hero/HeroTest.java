@@ -21,7 +21,6 @@ public class HeroTest {
     @Test
     public void add_level_shouldIncreaseLevel(){
         Hero mage = new Mage(1, "Jaina proudmoore", 8);
-
         System.out.println(mage.primaryAttribute.getDexterity());
         mage.levelUp();
 

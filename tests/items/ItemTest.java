@@ -80,9 +80,21 @@ public class ItemTest {
 
         //Exception exception = assertThrows(expected, () -> warrior.equipArmor(armor));
 
+    }
+    @Test
+    public void calculate_DPS_whenNoWeaponEquipped() throws InvalidWeaponException {
+        Weapon weapon = new Weapon("Axe", 1, WeaponType.AXE,7,1.1, WEAPON);
+        Hero warrior = new Warrior(1,"Garrosh",1,5,2);
+
+        double expected = (7* 1.1) * (1 + (5/100.0));
+
+        double actual = warrior.equipWeapon(weapon);
+        //Exception exception = assertThrows(expected, () -> warrior.equipArmor(armor));
+
 
 
     }
+
 
 
 }

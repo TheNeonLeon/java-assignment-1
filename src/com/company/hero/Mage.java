@@ -1,8 +1,12 @@
 package com.company.hero;
 
+import com.company.hero.items.ArmorType;
+import com.company.hero.items.Weapon;
 import com.company.hero.items.WeaponType;
 
 public class Mage extends Hero {
+    private Weapon wand;
+    private Weapon staff;
 
     public Mage(int level, String name, int intelligence){
         super(level, name, intelligence,1,1);
@@ -13,11 +17,6 @@ public class Mage extends Hero {
     public void setMagePrimaryAttribute(int intelligence) {
 
         this.primaryAttribute = new PrimaryAttribute(1,1,intelligence);
-    }
-    public void checkValid() {
-        for (WeaponType weapon : WeaponType.values()) {
-            System.out.println(weapon);
-        }
     }
 
     public PrimaryAttribute getPrimaryAttribute() {
