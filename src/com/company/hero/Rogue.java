@@ -2,7 +2,6 @@ package com.company.hero;
 
 public class Rogue extends Hero{
     //Rogue starts with 6 dexterity and 2 strength
-        PrimaryAttribute primaryAttribute;
 
         public Rogue(int level, String name, int intelligence, int strength, int dexterity) {
             super(level, name,1,2,6);
@@ -24,5 +23,10 @@ public class Rogue extends Hero{
             primaryAttribute.increaseStrength(1);
             primaryAttribute.increaseIntelligence(1);
         }
+
+    @Override
+    public void totalMainPrimaryAttributes() {
+
+    }
 
 }

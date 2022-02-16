@@ -23,6 +23,9 @@ public abstract class Hero {
         this.primaryAttribute = new PrimaryAttribute(strength, dexterity, intelligence);
     }
 
+    public PrimaryAttribute getAttributes(){
+        return primaryAttribute;
+    }
 
 // get total attribute
     public int getTotal(){
@@ -45,7 +48,7 @@ public abstract class Hero {
 
 
 //DPS CALC
-    public double getDPS(){
+   /* public double getDPS(){
         double dmgWithoutWeapon = 1 * (getTotal() / 100.0);
         double weaponDamage =
                 ((Weapon)equipment.get(Slot.WEAPON)).getAttackDamage();
@@ -58,7 +61,7 @@ public abstract class Hero {
             return dmgWithoutWeapon;
         }
 
-    }
+    }*/
     //Default attributes to heroes
 
     public int setLevel(int lvl){
@@ -113,5 +116,5 @@ public abstract class Hero {
 //override and create abstract for increaseAttribute method. Now it can be used from superclass
     public abstract void increaseAttributes();
 
-   // public abstract void totalMainPrimaryAttributes();
+    public abstract void totalMainPrimaryAttributes();
 }

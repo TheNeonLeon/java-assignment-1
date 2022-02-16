@@ -1,15 +1,13 @@
 package com.company.hero;
 
-import com.company.hero.items.ArmorType;
 import com.company.hero.items.Weapon;
-import com.company.hero.items.WeaponType;
 
 public class Mage extends Hero {
     private Weapon wand;
     private Weapon staff;
 
     public Mage(int level, String name, int intelligence){
-        super(level, name, intelligence,1,1);
+        super(1, name, intelligence,1,1);
     }
 
     //set primary attributes to mage default attributes
@@ -19,15 +17,23 @@ public class Mage extends Hero {
         this.primaryAttribute = new PrimaryAttribute(1,1,intelligence);
     }
 
-    public PrimaryAttribute getPrimaryAttribute() {
+    public void getPrimaryAttribute() {
 
-        return primaryAttribute;
+        this.primaryAttribute = new PrimaryAttribute(1, 1, 8);
     }
-//increaseAttrributes method
+
+//increaseAttributes method
     public void increaseAttributes(){
         primaryAttribute.increaseDexterity(1);
         primaryAttribute.increaseStrength(1);
         primaryAttribute.increaseIntelligence(5);
+    }
+
+    @Override
+    public void totalMainPrimaryAttributes() {
+        primaryAttribute.getDexterity();
+        primaryAttribute.setIntelligence(8);
+        primaryAttribute.setStrength(1);
     }
 
 }

@@ -44,7 +44,6 @@ public abstract class Item {
     {
         classes.add(WeaponType.AXE);
     }*/
-
     public void checkValid() {
         for (WeaponType weapon : WeaponType.values()) {
             System.out.println(weapon);

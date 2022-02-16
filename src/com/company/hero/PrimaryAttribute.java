@@ -24,6 +24,15 @@ public class PrimaryAttribute {
     public int getIntelligence(){
         return intelligence;
     }
+    public void setStrength(int strength){
+        this.strength = strength;
+    }
+    public void setDexterity(int dexterity){
+        this.dexterity = dexterity;
+    }
+    public void setIntelligence(int intelligence){
+        this.intelligence = intelligence;
+    }
 
     //increase stats
     public void increaseStrength(int increaseStat){

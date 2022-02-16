@@ -3,11 +3,10 @@ package com.company.hero;
     //Ranger starts with 7 dexterity
 
     public class Ranger extends Hero {
-        PrimaryAttribute primaryAttribute;
 
 
-        public Ranger(int level, String name, int intelligence, int strength, int dexterity) {
-            super(level, name,1,1,8);
+        public Ranger(int level, String name,int dexterity) {
+            super(level, name,1,1,dexterity);
         }
 
         //set primary attributes to Ranger default attributes
@@ -25,6 +24,11 @@ package com.company.hero;
             primaryAttribute.increaseDexterity(5);
             primaryAttribute.increaseStrength(1);
             primaryAttribute.increaseIntelligence(1);
+
+        }
+
+        @Override
+        public void totalMainPrimaryAttributes() {
 
         }
 
