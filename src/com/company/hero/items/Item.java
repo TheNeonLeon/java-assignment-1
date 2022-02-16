@@ -16,6 +16,7 @@ public abstract class Item {
         this.requiredLevel = requiredLevel;
         this.slot = slot;
     }
+
 //setter and getters
     public void setItemName(String itemName){
         this.itemName = itemName;
@@ -43,6 +44,7 @@ public abstract class Item {
     {
         classes.add(WeaponType.AXE);
     }*/
+
     public void checkValid() {
         for (WeaponType weapon : WeaponType.values()) {
             System.out.println(weapon);

@@ -24,7 +24,7 @@ public abstract class Hero {
     }
 
 
-// get totalprimaryattribute
+// get total attribute
     public int getTotal(){
         int total = primaryAttribute.getIntelligence();
         total += primaryAttribute.getDexterity();
@@ -43,6 +43,7 @@ public abstract class Hero {
         return total;
     }
 
+
 //DPS CALC
     public double getDPS(){
         double dmgWithoutWeapon = 1 * (getTotal() / 100.0);
@@ -50,7 +51,6 @@ public abstract class Hero {
                 ((Weapon)equipment.get(Slot.WEAPON)).getAttackDamage();
         double weaponAttackSpeed = ((Weapon)equipment.get(Slot.WEAPON)).getAttackSpeed();
         double weaponDPS = weaponDamage * weaponAttackSpeed;
-
 
         if(equipment.containsKey(Slot.WEAPON)){
             return weaponDPS * (1 + (getTotal() / 100.0));
@@ -80,6 +80,7 @@ public abstract class Hero {
         increaseAttributes();
         this.level++;
     }
+
 //equip weapon to hashmap logic
     public boolean equipWeapon(Weapon weapon) throws InvalidWeaponException {
         if(weapon.getRequiredLevel() > level){
@@ -111,4 +112,6 @@ public abstract class Hero {
     }
 //override and create abstract for increaseAttribute method. Now it can be used from superclass
     public abstract void increaseAttributes();
+
+   // public abstract void totalMainPrimaryAttributes();
 }
