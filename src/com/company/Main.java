@@ -12,13 +12,17 @@ public class Main {
         System.out.println(mage.checkValid());
         Scanner in = new Scanner(System.in);
 
+        System.out.println("Choose your name: ");
+        String nameChoice = in.nextLine();
+        System.out.println("Welcome " + nameChoice);
+
         System.out.println("Choose your class: " + " mage 1: Ranger 2: Rogue 3: Warrior: 4");
         int choice = in.nextInt();
         switch (choice) {
-            case 1 -> System.out.println("You have chosen Mage");
-            case 2 -> System.out.println("You have chosen Ranger");
-            case 3 -> System.out.println("You have chosen Rogue");
-            case 4 -> System.out.println("You have chosen Warrior");
+            case 1 -> System.out.println(nameChoice + ", You have chosen Mage");
+            case 2 -> System.out.println(nameChoice + ", You have chosen Ranger");
+            case 3 -> System.out.println(nameChoice +  ", You have chosen Rogue");
+            case 4 -> System.out.println(nameChoice + ", You have chosen Warrior");
             default -> System.out.println("Invalid choice");
         }
     }

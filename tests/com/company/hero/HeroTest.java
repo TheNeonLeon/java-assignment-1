@@ -62,8 +62,8 @@ public class HeroTest {
         //Act
         PrimaryAttribute actual = warrior.getAttributes();
         //Assert
-        assertEquals(2, actual.getStrength());
-        assertEquals(6, actual.getDexterity());
+        assertEquals(5, actual.getStrength());
+        assertEquals(2, actual.getDexterity());
         assertEquals(1,actual.getIntelligence());
     }
     @Test

@@ -103,7 +103,6 @@ public class ItemTest {
         double actual = warrior.getDPS();
 
         assertEquals(expected,actual);
-
     }
     @Test
     public void calculate_DPS_withWeaponEquipped() throws InvalidWeaponException{
