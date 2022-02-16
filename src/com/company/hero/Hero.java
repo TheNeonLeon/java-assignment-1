@@ -48,20 +48,20 @@ public abstract class Hero {
 
 
 //DPS CALC
-   /* public double getDPS(){
+    public double getDPS(){
         double dmgWithoutWeapon = 1 * (getTotal() / 100.0);
         double weaponDamage =
                 ((Weapon)equipment.get(Slot.WEAPON)).getAttackDamage();
         double weaponAttackSpeed = ((Weapon)equipment.get(Slot.WEAPON)).getAttackSpeed();
         double weaponDPS = weaponDamage * weaponAttackSpeed;
 
-        if(equipment.containsKey(Slot.WEAPON)){
-            return weaponDPS * (1 + (getTotal() / 100.0));
-        }else{
+        if(!equipment.containsKey(Slot.WEAPON)){
             return dmgWithoutWeapon;
+        }else{
+            return weaponDPS;
         }
 
-    }*/
+    }
     //Default attributes to heroes
 
     public int setLevel(int lvl){

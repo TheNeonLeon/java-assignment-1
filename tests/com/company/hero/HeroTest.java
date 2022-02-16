@@ -79,14 +79,15 @@ public class HeroTest {
     @Test
     public void add_validLevelUp_shouldReturnIncreasedStatsForMage(){
         //Arrange
-        Hero mage = new Mage(1,"Jaina proudmoore",8);
-        mage.levelUp();
+        Hero ranger = new Ranger(1,"Jaina proudmoore",7);
 
-        System.out.println(mage.primaryAttribute.getIntelligence());
-        int expected = 13;
-        int actual = mage.primaryAttribute.getIntelligence();
+        ranger.levelUp();
 
-        assertEquals(expected, actual);
+        PrimaryAttribute actual = ranger.getAttributes();
+
+        assertEquals(2, actual.getStrength());
+        assertEquals(12, actual.getDexterity());
+        assertEquals(2,actual.getIntelligence());
  }
     @Test
     public void add_validLevelUp_shouldReturnIncreasedStatsForRanger(){
@@ -104,7 +105,7 @@ public class HeroTest {
     @Test
     public void add_validLevelUp_shouldReturnIncreasedStatsForRogue(){
         //Arrange
-        Hero rogue = new Rogue(1,"Jaina proudmoore",1,2,6);
+        Hero rogue = new Rogue(1,"rogi",1,2,6);
 
         rogue.levelUp();
 
