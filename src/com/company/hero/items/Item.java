@@ -37,13 +37,6 @@ public abstract class Item {
         return this.slot;
     }
 
-    //ArrayList<Weapon> classes = new ArrayList<Weapon>();
-    /*WeaponType values[] = WeaponType.values();
-
-    for(WeaponType weapon: WeaponType.values())
-    {
-        classes.add(WeaponType.AXE);
-    }*/
     public void checkValid() {
         for (WeaponType weapon : WeaponType.values()) {
             System.out.println(weapon);
